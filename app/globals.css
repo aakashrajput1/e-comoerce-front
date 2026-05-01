@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Abolition Test — headings (h1, h2, h3, h4, h5, h6) ─────────────────── */
+@font-face {
+  font-family: 'Abolition Test';
+  src: url('https://db.onlinewebfonts.com/t/15cca5e88777d0b1e9b3d37c8a41a3e5.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/15cca5e88777d0b1e9b3d37c8a41a3e5.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Base ────────────────────────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #FAEFEF;
+  color: #111827;
+  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* ── Headings → Abolition Test ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Abolition Test', var(--font-outfit), system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* ── Body text → Outfit ──────────────────────────────────────────────────── */
+p, span, a, li, td, th, label, input, textarea, select, button {
+  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f3e8e8; }
+::-webkit-scrollbar-thumb { background: #cf3232; border-radius: 10px; opacity: 0.5; }
+::-webkit-scrollbar-thumb:hover { background: #b82a2a; }
+
+.recharts-tooltip-wrapper { outline: none !important; }
