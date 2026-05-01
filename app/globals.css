@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-/* ── Abolition Test — headings (h1, h2, h3, h4, h5, h6) ─────────────────── */
-@font-face {
-  font-family: 'Abolition Test';
-  src: url('https://db.onlinewebfonts.com/t/15cca5e88777d0b1e9b3d37c8a41a3e5.woff2') format('woff2'),
-       url('https://db.onlinewebfonts.com/t/15cca5e88777d0b1e9b3d37c8a41a3e5.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ── Base ────────────────────────────────────────────────────────────────── */
 body {
   background: #FAEFEF;
@@ -18,10 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Headings → Abolition Test ───────────────────────────────────────────── */
+/* ── Headings → Bebas Neue ───────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Abolition Test', var(--font-outfit), system-ui, sans-serif;
-  letter-spacing: 0.01em;
+  font-family: var(--font-bebas), 'Impact', sans-serif;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  color: #1f2937;
 }
 
 /* ── Body text → Outfit ──────────────────────────────────────────────────── */

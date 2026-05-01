@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Outfit } from 'next/font/google';
+import { Outfit, Bebas_Neue } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/lib/auth';
 import { VendorAuthProvider } from '@/lib/vendorAuth';
@@ -11,6 +11,13 @@ const outfit = Outfit({
   display: 'swap',
 });
 
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  variable: '--font-bebas',
+  weight: '400',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Bazaar Marketplace',
   description: 'Multi-vendor marketplace',
@@ -18,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={outfit.variable}>
+    <html lang="en" className={`${outfit.variable} ${bebas.variable}`}>
       <body>
         <AuthProvider>
           <VendorAuthProvider>

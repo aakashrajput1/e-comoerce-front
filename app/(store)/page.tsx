@@ -108,7 +108,7 @@ function ProductCard({ product, size = 'md' }: { product: any; size?: 'sm' | 'md
           <span className="text-xs text-gray-500">{product.averageRating?.toFixed(1) || '4.5'}</span>
         </div>
         <div className="flex items-center gap-2 mt-1.5">
-          <span className="font-black text-gray-900 text-sm">{formatCurrency(product.price)}</span>
+          <span className="font-semibold text-gray-900 text-sm">{formatCurrency(product.price)}</span>
           {product.compareAtPrice && <span className="text-xs text-gray-400 line-through">{formatCurrency(product.compareAtPrice)}</span>}
         </div>
       </div>
@@ -127,7 +127,7 @@ function ScrollRow({ title, icon, products, href, accent = '#cf3232' }: { title:
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             {icon}
-            <h2 className="text-xl font-black text-gray-900">{title}</h2>
+            <h2 className="text-xl font-normal text-gray-800">{title}</h2>
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => scroll(-600)} className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#FAEFEF] transition-colors">
@@ -228,7 +228,7 @@ export default function StorePage() {
             </span>
             <h1
               key={heroBanner + 'h'}
-              className="text-5xl sm:text-6xl font-black text-white leading-[1.05] mb-4 whitespace-pre-line"
+              className="text-5xl sm:text-6xl font-normal text-white leading-[1.1] mb-4 whitespace-pre-line"
               style={{ animation: 'fadeUp 0.5s ease 0.05s both' }}>
               {h.title}
             </h1>
@@ -275,7 +275,7 @@ export default function StorePage() {
         <FadeIn>
           <div>
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-xl font-black text-gray-900">Shop by Category</h2>
+              <h2 className="text-xl font-normal text-gray-800">Shop by Category</h2>
               <Link href="/categories" className="text-sm font-bold flex items-center gap-1" style={{ color: '#cf3232' }}>All <ArrowRight className="w-3.5 h-3.5" /></Link>
             </div>
             <div
@@ -302,7 +302,7 @@ export default function StorePage() {
               <div className="px-6 pt-6 pb-2 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-5 h-5" style={{ color: '#cf3232' }} />
-                  <h2 className="text-xl font-black text-gray-900">Featured</h2>
+                  <h2 className="text-xl font-normal text-gray-800">Featured</h2>
                   <span className="text-xs font-black px-2 py-0.5 rounded-full text-white" style={{ background: '#cf3232' }}>Sponsored</span>
                 </div>
                 <Link href="/featured" className="text-sm font-bold flex items-center gap-1" style={{ color: '#cf3232' }}>See all <ArrowRight className="w-3.5 h-3.5" /></Link>
@@ -340,7 +340,7 @@ export default function StorePage() {
         <FadeIn>
           <div>
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-xl font-black text-gray-900">Top Sellers</h2>
+              <h2 className="text-xl font-normal text-gray-800">Top Sellers</h2>
               <Link href="/top-sellers" className="text-sm font-bold flex items-center gap-1" style={{ color: '#cf3232' }}>All stores <ArrowRight className="w-3.5 h-3.5" /></Link>
             </div>
             <div
@@ -359,7 +359,7 @@ export default function StorePage() {
                       : <div className="w-full h-full flex items-center justify-center text-5xl">🏪</div>}
                   </div>
                   <div className="p-4">
-                    <p className="text-base font-black text-gray-900 truncate">{vendor.businessName}</p>
+                    <p className="text-base font-semibold text-gray-900 truncate">{vendor.businessName}</p>
                     <p className="text-sm text-gray-400 mt-0.5">{vendor.totalProducts} products · {vendor.totalOrders?.toLocaleString()} orders</p>
                   </div>
                 </Link>
@@ -384,7 +384,7 @@ export default function StorePage() {
             <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #a78bfa 0%, transparent 50%), radial-gradient(circle at 80% 50%, #38bdf8 0%, transparent 50%)' }} />
             <div className="relative z-10 max-w-lg">
               <p className="text-violet-300 text-sm font-bold uppercase tracking-widest mb-2">For Entrepreneurs</p>
-              <h2 className="text-4xl font-black text-white mb-3 leading-tight">Start Selling<br />on Bazaar</h2>
+              <h2 className="text-4xl font-normal text-white mb-3 leading-tight">Start Selling<br />on Bazaar</h2>
               <p className="text-white/50 text-sm mb-6">Join thousands of sellers. Set up your store in minutes and reach millions of buyers.</p>
               <div className="flex gap-3">
                 <Link href="/vendor/register"
@@ -416,7 +416,7 @@ export default function StorePage() {
         <FadeIn>
           <div>
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-xl font-black text-gray-900">All Products</h2>
+              <h2 className="text-xl font-normal text-gray-800">All Products</h2>
               <Link href="/products" className="text-sm font-bold flex items-center gap-1" style={{ color: '#cf3232' }}>View all <ArrowRight className="w-3.5 h-3.5" /></Link>
             </div>
             <div
@@ -445,7 +445,7 @@ export default function StorePage() {
           <div className="rounded-3xl p-6" style={{ background: '#fafafa', border: '1px solid #f0f0f0' }}>
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp className="w-5 h-5" style={{ color: '#cf3232' }} />
-              <h2 className="text-lg font-black text-gray-900">Trending</h2>
+              <h2 className="text-lg font-normal text-gray-800">Trending</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {['Wireless Earbuds','Smart Watch','Running Shoes','Face Serum','Laptop Stand','Yoga Mat','Mechanical Keyboard','LED Lamp','Protein Shaker','Leather Bag'].map((term, i) => (
